@@ -14,33 +14,27 @@ namespace TrafficLightSimulator
 {
     public partial class Form1 : Form
     {
+        private SemaphoreController semaphoreController;
+
         public Form1()
         {
             InitializeComponent();
-            // Inicializa el controlador de semáforos
             InitializeSemaphoreController();
         }
 
-        // Método para inicializar el controlador de semáforos
         private void InitializeSemaphoreController()
         {
-            var semaphores = new List<Semaphore>(); // Lista para almacenar los semáforos
+            var semaphores = new List<TrafficSemaphore>();
 
-            // Asegúrate de que los controles redLight1, yellowLight1, greenLight1, etc., estén definidos en Form1.Designer.cs
-            semaphores.Add(new Semaphore(redLight1, yellowLight1, greenLight1));
-            // Repite para los demás semáforos...
+            // Crear y agregar semáforos a la lista
+            // Asegúrate de que los nombres de los paneles coincidan con los de Form1.Designer.cs
+            semaphores.Add(new TrafficSemaphore(redLight, yellowLight, greenLight));
+            semaphores.Add(new TrafficSemaphore(panel3, panel2, panel4));
+            semaphores.Add(new TrafficSemaphore(panel7, panel6, panel8));
+            // Continúa agregando los semáforos restantes aquí...
 
-            semaphoreController = new SemaphoreController(semaphores); // Inicializar el controlador
-            semaphoreController.Run(); // Comenzar a controlar los semáforos
-        }
-
-        private Panel CreateLight(Color color, Point location)
-        {
-            Panel light = new Panel();
-            light.BackColor = color;
-            light.Size = new Size(50, 50); // Tamaño de la luz del semáforo
-            light.Location = location;
-            return light;
+            semaphoreController = new SemaphoreController(semaphores);
+            semaphoreController.Run();
         }
 
 

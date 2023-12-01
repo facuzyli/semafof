@@ -1,0 +1,10 @@
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\bin\Debug\TrafficLightSimulator.exe.config
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\bin\Debug\TrafficLightSimulator.exe
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\bin\Debug\TrafficLightSimulator.pdb
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\obj\Debug\TrafficLightSimulator.csproj.AssemblyReference.cache
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\obj\Debug\TrafficLightSimulator.Form1.resources
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\obj\Debug\TrafficLightSimulator.Properties.Resources.resources
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\obj\Debug\TrafficLightSimulator.csproj.GenerateResource.cache
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\obj\Debug\TrafficLightSimulator.csproj.CoreCompileInputs.cache
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\obj\Debug\TrafficLightSimulator.exe
+C:\Users\facun\source\repos\TrafficLightSimulator\TrafficLightSimulator\obj\Debug\TrafficLightSimulator.pdb

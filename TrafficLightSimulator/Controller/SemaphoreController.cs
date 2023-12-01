@@ -1,41 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
 using TrafficLightSimulator.Model;
-using Semaphore = TrafficLightSimulator.Model.Semaphore;
 
 namespace TrafficLightSimulator.Controller
 {
     public class SemaphoreController
     {
-        public List<Semaphore> semaphores; // Lista de semáforos
+        private List<TrafficSemaphore> semaphores;
 
-        public SemaphoreController(List<Semaphore> semaphores) => this.semaphores = semaphores; // Inicializar la lista de semáforos
+        public SemaphoreController(List<TrafficSemaphore> semaphores)
+        {
+            this.semaphores = semaphores;
+        }
 
         public void Run()
         {
             foreach (var semaphore in semaphores)
             {
                 Thread semaphoreThread = new Thread(() => ControlSemaphore(semaphore));
-                semaphoreThread.Start(); // Iniciar un hilo para cada semáforo
+                semaphoreThread.Start();
             }
         }
 
-        public void ControlSemaphore(Semaphore semaphore)
+        private void ControlSemaphore(TrafficSemaphore semaphore)
         {
-            while (true) // Ciclo infinito para el funcionamiento continuo
+            while (true)
             {
                 semaphore.ChangeToGreen();
-                Thread.Sleep(5000); // Verde durante 5 segundos
+                Thread.Sleep(5000);
 
                 semaphore.ChangeToYellow();
-                Thread.Sleep(2000); // Amarillo durante 2 segundos
+                Thread.Sleep(2000);
 
                 semaphore.ChangeToRed();
-                Thread.Sleep(5000); // Rojo durante 5 segundos
+                Thread.Sleep(5000);
             }
         }
     }
